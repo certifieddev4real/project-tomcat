@@ -1,0 +1,163 @@
+/*-----------------------------------*\
+  #main.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2024 certifieddev
+ */
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+  /* Colors */
+  --COLOR-PRIMARY-GREEN: hsla(150, 100%, 35%, 1);  /* Vibrant Green */
+  --COLOR-SECONDARY-GREEN: hsla(150, 80%, 50%, 1);  /* Soft Green */
+  --COLOR-ACCENT-BLUE: hsla(210, 100%, 40%, 1);  /* Deep Blue */
+  --COLOR-ACCENT-RED: hsla(360, 80%, 40%, 1);  /* Bold Red */
+  --COLOR-DARK-BLACK: hsla(220, 30%, 10%, 1);  /* Rich Black */
+  --COLOR-COOL-BLACK: hsla(220, 25%, 20%, 1);  /* Cool Black */
+  --COLOR-NEUTRAL-WHITE: hsla(0, 0%, 100%, 1);  /* Crisp White */
+  --COLOR-TRANSLUCENT-WHITE: hsla(0, 0%, 100%, 0.15);  /* Semi-transparent White */
+
+  /* Typography */
+  --FONT-FAMILY-MAIN: "syne", sans-serif;  /* Main font for readability */
+  --FONT-FAMILY-SECONDARY: "syne", serif;  /* Accent font for titles */
+
+  /* Font Sizes */
+  --FONT-SIZE-H1: 5rem;  /* Largest font size for headings */
+  --FONT-SIZE-H2: 3.6rem;  /* Secondary heading size */
+  --FONT-SIZE-H3: 2.8rem;  /* Smaller heading */
+  --FONT-SIZE-H4: 2.2rem;  /* Section title */
+  --FONT-SIZE-H5: 1.8rem;  /* Paragraph text size */
+  --FONT-SIZE-H6: 1.6rem;  /* Minor text size */
+  --FONT-SIZE-LEGEND: 1.4rem;  /* Caption size */
+
+  /* Font Weight */
+  --FONT-WEIGHT-BOLD: 700;  /* Bold font */
+  --FONT-WEIGHT-REGULAR: 400;  /* Regular weight for body text */
+
+  /* Spacing */
+  --SECTION-PADDING: 100px;  /* Padding for large sections */
+  --CONTAINER-MARGIN: 50px;  /* Margin between containers */
+  --CONTENT-GAP: 20px;  /* Gap between content items */
+
+  /* Border Radius */
+  --BORDER-RADIUS-SMALL: 8px;  /* Subtle rounded corners */
+  --BORDER-RADIUS-MEDIUM: 16px;  /* More pronounced rounded corners */
+  --BORDER-RADIUS-LARGE: 25px;  /* Full-rounded elements */
+
+  /* Transition */
+  --TRANSITION-SMOOTH: 0.3s ease-in-out;  /* Smooth transitions */
+  --TRANSITION-FADE: 0.5s ease-out;  /* Fade transition for elements */
+  --TRANSITION-SCALE: 0.4s cubic-bezier(0.42, 0, 0.58, 1);  /* Scale effect transition */
+
+  /* Miscellaneous */
+  --SHADOW-DARK: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+  --SHADOW-LIGHT: 0px 2px 4px rgba(255, 255, 255, 0.2);  /* Light shadow effect */
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+span,
+data,
+button {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+html {
+  font-family: var(--FONT-FAMILY-MAIN);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("/assets/images\,videos/bg image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  overflow: hidden;
+  height: 100vh;
+}
+
+body.loaded {
+  overflow: overlay;
+}
+
+body.nav-active {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--white);
+  border-radius: 30px;
+}
+
+
+/* Make the video container take up the full viewport */
+#video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+#intro-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire screen */
+}
+
+/* Main content styles */
+#main-content {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
